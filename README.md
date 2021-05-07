@@ -15,7 +15,7 @@ Pull the Docker image:
 docker pull eventstore/eventstore
 
 Run the container:
-docker run --name esdb-node -it -p 2113:2113 eventstore/eventstore:latest --insecure --run-projections=All
+docker run --name esdb-node -it -p 2113:2113 eventstore/eventstore:latest --insecure
 
 This command will run EventStoreDB as a container named "esdb-node", and it will listen on HTTP port 2113, which is
 the default HTTP port. The "--insecure" parameter means that HTTPS will not be used.
