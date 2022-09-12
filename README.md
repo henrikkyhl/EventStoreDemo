@@ -1,9 +1,9 @@
 # EventStoreDemo
 Demonstrates how to use the EventStore framework
 The solution consists of three console applications:
-1.	EventWriter: Writes an event to the EventStore database every 5 seconds.
-2.	EventReader: Reads all the events in the EventStore database.
-3.	EventSubscriber: Is notified every time an event is written to the EventStore database. Information about the event is shown on the screen.
+EventWriter: Writes an event to the EventStore database every 5 seconds.
+EventReader: Reads all the events in the EventStore database.
+EventSubscriber: Is notified every time an event is written to the EventStore database. Information about the event is shown on the screen.
 To run the application, you must first get EventStoreDB. You can either download EventStoreDB binaries at https://eventstore.org/ and then install it on your computer, or you can run EventStoreDB as a Docker container. It is far easier to run it as a Docker container, and this setup is fine for development environments. To run EventStoreDB as a Docker container, do the following:
 Pull the Docker image: docker pull eventstore/eventstore
 Run the container: docker run --name esdb-node -it -p 2113:2113 eventstore/eventstore:latest --insecure
@@ -19,4 +19,3 @@ How to subscribe to events: https://developers.eventstore.com/clients/grpc/subsc
 How to read events: https://developers.eventstore.com/clients/grpc/reading-events/reading-from-a-stream.html
 Task asynchronous programming model (TAP) (you should have a basic understanding of TAP, since the .NET gRPC client uses this programming model extensively) https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model
 
-![image](https://user-images.githubusercontent.com/7660644/189610578-1f26729f-60bb-4251-a525-e5d1e9acfee2.png)
