@@ -13,3 +13,10 @@ https://github.com/EventStore/EventStore/blob/master/samples/server/docker-compo
 You need an EventStore client to communicate with EventStoreDB. Client libraries are available for several programming languages and two communication protocols: gRPC and TCP. Since there are plans to phase out TCP in the near future, we will use the gRPC client for this example.
 We will use the .NET gRPC client, which is available as a NuGet package named "EventStore.Client.Grpc.Streams". Since we are running in insecure mode (i.e. without HTTPS), we also need to add the "Grpc.Net.Client" NuGet package.
 Useful links for further information:
+How to run EventStoreDB in Docker: https://developers.eventstore.com/server/v21.2/docs/installation/docker.html#run-with-docker
+How to connect to EventStoreDB and getting started creating, appending and reading events: https://developers.eventstore.com/clients/grpc/getting-started/connecting.html
+How to subscribe to events: https://developers.eventstore.com/clients/grpc/subscribing-to-streams/
+How to read events: https://developers.eventstore.com/clients/grpc/reading-events/reading-from-a-stream.html
+Task asynchronous programming model (TAP) (you should have a basic understanding of TAP, since the .NET gRPC client uses this programming model extensively) https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model
+
+![image](https://user-images.githubusercontent.com/7660644/189610578-1f26729f-60bb-4251-a525-e5d1e9acfee2.png)
