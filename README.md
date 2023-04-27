@@ -15,6 +15,9 @@ Pull the Docker image: docker pull eventstore/eventstore
 Run the container: docker run --name esdb-node -it -p 2113:2113 eventstore/eventstore:latest --insecure
 
 This command will run EventStoreDB as a container named "esdb-node", and it will listen on HTTP port 2113, which is the default HTTP port. The "--insecure" parameter means that HTTPS will not be used.
+
+If you have an Apple M1 or M2 processor, you cannot run the eventstore/eventstore:latest image. Use instead the eventstore/eventstore:22.10.1-alpha-arm64v8 image.
+
 You can also run EventStoreDB as part of a multi-container application using docker-compose. To do that, you need to add EventStoreDB as a service in the docker compose file. The link below shows how to do that:
 https://github.com/EventStore/EventStore/blob/master/samples/server/docker-compose.yaml
 
